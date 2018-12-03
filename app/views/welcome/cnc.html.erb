@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Command and Control</title>
+    <table>
+    <tr>
+      <td>
+        <h4> Identified DGA Command and Control Malware on Host 172.20.0.15 </h4>
+        <img src="/assets/Sub_Blk_usecaseII.PNG" alt="Smiley face" height="600" width="750">
+      </td>
+      <td>
+        <h3> Sublime Black Recommendations </h3>
+        <table BORDER =3 BORDERCOLOR = #87CEEB >
+          <tr>
+            <td>
+
+              <p>Sublime Black Server will send command to Ticket Server to Create an Incident and Emergency Change Request</p>
+
+            </td>
+            <td>
+
+              <%= link_to 'Accept Action', cnc_accepted_path, class: "btn btn-primary btn-small"%>
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Sublime Black Server will send command to Network switch to remove infected computer from production network</p>
+            </td>
+            <td>
+              <%= link_to 'Accept Action', cnc_accepted_path, class: "btn btn-primary btn-small"%>
+            </td>
+          </tr>
+          <tr>
+           <td>
+             <p>Sublime Black Server will send command to Endpoint Security Server to look for malware on all devices</p>
+           </td>
+            <td>
+              <%= link_to 'Accept Action', cnc_accepted_path, class: "btn btn-primary btn-small"%>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Sublime Black will send command to firewall to block outbound traffic</p>
+            </td>
+            <td>
+              <%= link_to 'Accept Action', cnc_accepted_path, class: "btn btn-primary btn-small"%>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+              <%= link_to 'Accept ALL  Actions',cnc_accepted_path, class: "btn btn-primary btn-lg" %>
+
+            </td>
+          </tr>
+        </table>
+
+        <h3> Threat Intelligence </h3>
+        <p>NSA has reported an uptick of command and control botnet attacks utilizing domain generation algorithms (DGA) to obfuscate communication between malware and control server</p>
+        <h3>
+
+          <%=link_to 'AI Approach to Identify DGA', "graphics", class: "btn btn-primary btn-medium" %>
+
+        </h3>
+
+
+      </td>
+
+    </table>
+</head>
+<body>
+
+</body>
+</html>

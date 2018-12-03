@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Last 24</title>
+</head>
+<body>
+<h1 align = 'center'>Resolved Incidents Last 48 Hours</h1>
+
+
+<div align='center' id="piechart">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        // Load google charts
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Draw the chart and set the chart values
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Feature', 'Strength'],
+                ['DDOS', 52],
+                ['Port Scan', 17],
+                ['R2U', 11]
+            ]);
+
+            // Optional; add a title and set the width and height of the chart
+            var options = {'title':'Attack Type Summary', 'width':700, 'height':300};
+
+            // Display the chart inside the <div> element with id="piechart"
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+    </script>
+</div>
+
+<h2>DDoS Attacks <span style="color: green"> [Action Taken: Source IPs Blacklisted] </span></h2>
+<p>A Denial of Service (DoS) attack occurs when an outside actor attempts to flood a webserver with more GET requests in a short period of time than the server can handle, with the result that the server goes down, becoming unavailable to respond to legitimate operations.</p>
+<table border=0 cellpadding=0 cellspacing=0 width=929 style='border-collapse:
+ collapse;table-layout:fixed'>
+    <col width=120>
+    <col width=120>
+    <col width=200>
+    <col width=200>
+    <col width=250>
+    <col width=120>
+    <tr height=23>
+        <td height=23 class=xl24 width=120>srcIp</td>
+        <td class=xl24 width=120>destIp</td>
+        <td class=xl27 width=200>start</td>
+        <td class=xl27 width=200>end</td>
+        <td class=xl27 width=250>total-time</td>
+        <td class=xl26 width=120>count</td>
+    </tr>
+    <tr height=23>
+        <td height=23></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height=23>
+        <td height=23>10.12.14.15</td>
+        <td>172.20.0.4</td>
+        <td>2018 Dec 03 09:31:30</td>
+        <td>2018 Dec 03 11:40:28</td>
+        <td>1 hours 35 minutes 17 seconds</td>
+        <td align=right>794309</td>
+    </tr>
+    <tr height=23>
+        <td height=23>10.17.15.10</td>
+        <td>172.20.0.4</td>
+        <td>2018 Dec 03 09:31:34</td>
+        <td>2018 Dec 03 11:13:42</td>
+        <td>23 hours 14 minutes 17 seconds</td>
+        <td align=right>648937</td>
+    </tr>
+    <tr height=23>
+        <td height=23>10.6.6.7</td>
+        <td>172.20.0.15</td>
+        <td>2018 Dec 03 09:31:26</td>
+        <td>2018 Dec 03 11:38:36</td>
+        <td>14 hours 30 minutes 54 seconds</td>
+        <td align=right>577639</td>
+    </tr>
+    <tr height=23>
+        <td height=23>10.12.15.152</td>
+        <td>172.20.0.15</td>
+        <td>2018 Dec 03 09:31:44</td>
+        <td>2018 Dec 03 11:39:23</td>
+        <td>23 hours 11 minutes 41 seconds</td>
+        <td align=right>485643</td>
+    </tr>
+    <tr height=23>
+        <td height=23></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+</table>
+<h2>Port Scan Attacks <span style="color: green"> [Action Taken: Source IPs Blacklisted] </span></h2>
+<p>A Port Scan attack occurs when an outside actor seeks an open, unsecured port by attempting a connection with every, or many, ports on one or more, usually outward-facing machines.</p>
+<table border=0 cellpadding=0 cellspacing=0 width=978 style='border-collapse:
+ collapse;table-layout:fixed'>
+    <col width=120>
+    <col width=120>
+    <col width=80>
+    <col width=100>
+    <col width=200>
+    <col width=200>
+    <col width=200>
+    <col width=75>
+    <tr height=21>
+        <td height=21 class=xl24 width=120>srcIp</td>
+        <td class=xl24 width=120>destIp</td>
+        <td class=xl27 width=80>numPorts</td>
+        <td class=xl27 width=100>perPortAvg</td>
+        <td class=xl27 width=200>start</td>
+        <td class=xl27 width=200>end</td>
+        <td class=xl24 width=200>total duration</td>
+        <td width=75></td>
+    </tr>
+    <tr height=21>
+        <td height=21></td>
+        <td></td>
+        <td class=xl28></td>
+        <td class=xl28></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height=21>
+        <td height=21>10.10.11.15</td>
+        <td>172.20.0.2</td>
+        <td class=xl28>64185</td>
+        <td class=xl29>2.46</td>
+        <td>2018 Dec 03 11:31:16</td>
+        <td>2018 Dec 03 11:44:29</td>
+        <td>16 minutes 15 seconds</td>
+        <td></td>
+    </tr>
+    <tr height=21>
+        <td height=21>10.10.11.15</td>
+        <td>172.20.0.3</td>
+        <td class=xl28>65352</td>
+        <td class=xl29>3.28</td>
+        <td>2018 Dec 03 11:31:16</td>
+        <td>2018 Dec 03 11:44:40</td>
+        <td>9 minutes 14 seconds</td>
+        <td></td>
+    </tr>
+    <tr height=21>
+        <td height=21>10.10.11.15</td>
+        <td>172.20.0.4</td>
+        <td class=xl28>61028</td>
+        <td class=xl29>1.68</td>
+        <td>2018 Dec 03 11:31:16</td>
+        <td>2018 Dec 03 11:44:37</td>
+        <td>2 minutes 18 seconds</td>
+        <td></td>
+    </tr>
+    <tr height=21>
+        <td height=21>10.10.11.15</td>
+        <td>172.20.0.5</td>
+        <td class=xl28>60767</td>
+        <td class=xl29>1.68</td>
+        <td>2018 Dec 03 11:31:16</td>
+        <td>2018 Dec 03 11:44:38</td>
+        <td>2 minutes 51 seconds</td>
+        <td></td>
+    </tr>
+    <tr height=21>
+        <td height=21>10.10.11.15</td>
+        <td>172.20.0.15</td>
+        <td class=xl28>65396</td>
+        <td class=xl29>3.28</td>
+        <td>2018 Dec 03 11:31:16</td>
+        <td>2018 Dec 03 11:44:35</td>
+        <td>2 minutes 26 seconds</td>
+        <td></td>
+    </tr>
+
+</table>
+<h2>Root to User Attacks <span style="color: green"> [Action Taken: Source IPs Blacklisted] </span></h2>
+<p>A Root to User (R2U), attack occurs when an outside actor attempts to log in to one or more, usually outward-facing machines.  In the present case, in the table below, during the time intervals indicated the source machines attempted to connect to the destination machines on port 3389, which is the port used for Microsoft Remote Desktop Protocol.</p>
+<table border=0 cellpadding=0 cellspacing=0 width=577 style='border-collapse:
+ collapse;table-layout:fixed'>
+    <col width=104>
+    <col width=102>
+    <col width=155>
+    <col width=159>
+    <col width=57>
+    <tr height=23>
+        <td height=23 class=xl24 width=104>Source</td>
+        <td class=xl24 width=102>Destination</td>
+        <td class=xl27 width=155>Earliest</td>
+        <td class=xl27 width=159>Latest</td>
+        <td class=xl26 width=57>Count</td>
+    </tr>
+    <tr height=23>
+        <td height=23></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height=23>
+        <td height=23>10.12.15.152</td>
+        <td>172.10.0.2</td>
+        <td>2018 Dec 01 10:35:46</td>
+        <td>2018 Dec 03 05:44:44</td>
+        <td align=right>22154</td>
+    </tr>
+    <tr height=23>
+        <td height=23>10.12.15.152</td>
+        <td>172.10.0.7</td>
+        <td>2018 Dec 01 10:35:46</td>
+        <td>2018 Dec 03 22:30:58</td>
+        <td align=right>21866</td>
+    </tr>
+    <tr height=23>
+        <td height=23>10.12.15.152</td>
+        <td>172.10.0.4</td>
+        <td>2018 Dec 01 10:35:46</td>
+        <td>2018 Dec 03 22:31:02</td>
+        <td align=right>21857</td>
+    </tr>
+    <tr height=23>
+        <td height=23>10.12.15.152</td>
+        <td>172.10.0.9</td>
+        <td>2018 Dec 01 10:35:46</td>
+        <td>2018 Dec 03 22:30:58</td>
+        <td align=right>21857</td>
+    </tr>
+    <tr height=23>
+        <td height=23>10.12.15.152</td>
+        <td>172.10.0.8</td>
+        <td>2018 Dec 01 10:35:46</td>
+        <td>2018 Dec 03 22:31:02</td>
+        <td align=right>21853</td>
+    </tr>
+    <tr height=23>
+        <td height=23>10.12.15.152</td>
+        <td>172.20.0.6</td>
+        <td>2018 Dec 01 10:35:46</td>
+        <td>2018 Dec 03 22:31:02</td>
+        <td align=right>21818</td>
+    </tr>
+    <tr height=23>
+        <td height=23>10.12.15.152</td>
+        <td>172.10.0.5</td>
+        <td>2018 Dec 01 10:35:46</td>
+        <td>2018 Dec 03 22:31:02</td>
+        <td align=right>21796</td>
+    </tr>
+    <tr height=23>
+        <td height=23>10.12.15.152</td>
+        <td>172.30.0.2</td>
+        <td>2018 Dec 01 11:21:12</td>
+        <td>2018 Dec 01 16:22:11</td>
+        <td align=right>11542</td>
+    </tr>
+    <tr height=23>
+        <td height=23>10.12.15.152</td>
+        <td>172.20.0.2</td>
+        <td>2018 Dec 01 11:09:55</td>
+        <td>2018 Dec 01 16:23:33</td>
+        <td align=right>11524</td>
+    </tr>
+
+
+</table>
+</body>
+</html>

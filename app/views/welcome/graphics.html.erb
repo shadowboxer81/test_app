@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<body>
+
+<h1>Domain Generated Algorithms (DGA) </h1>
+<p>
+    <b><span style="color: firebrick">Cyber Threat: </span></b> A Domain Generating Algorithm (DGA) is a program or subroutine that provides malware with new domains on demand or on the fly.
+<a href="https://blog.malwarebytes.com/security-world/2016/12/explained-domain-generating-algorithm/">More on DGA</a>
+</p>
+<p>
+<p> <b> <span style="color: olivedrab">AI Model: </span></b> Sublime Black determined that a Gradient Boosting Decision Tree (GBT) fits the historical DGA data-set with high predictive power and interpretabilty.
+<a href="https://en.wikipedia.org/wiki/Gradient_boosting#Gradient_tree_boosting">More on GBT</a>
+</p>
+
+<div>
+    <table style="width:100%">
+        <tr><th><b>Last 10 URLs Visited</b></th><th><b>Model Prediction</b></th><th><b>Sublime Black Conclusion</b></th></tr>
+        <tr><td>bmskafjfoenhf.ru</td><td>dga</td>
+            <td rowspan="8" style="max-width:100px;">
+                40% of traffic from 172.20.0.15 is outbound to DGA domains. Strong signal that host is infected with <a  href="https://en.wikipedia.org/wiki/Conficker"> "Conficker</a> family of command and conrol malware.
+                <p></p>
+                <%= link_to 'Command and Control Mitigation', "cnc", class: "btn btn-primary btn-large" %>
+            </td>
+
+
+        </tr>
+
+        <tr><td>hollywoodreporter.com</td><td>normal</td></tr>
+        <tr><td>wikiseda.com</td><td>normal</td></tr>
+        <tr><td>ns1.experience.com</td><td>normal</td></tr>
+        <tr><td>lockheedmartin.com</td><td>normal</td></tr>
+        <tr><td>twitter.com</td><td>normal</td></tr>
+        <tr><td>mail.testimonymauritiusefficientlyanimals.town</td><td>dga</td></tr>
+        <tr><td>dev.kodtelefona.ru</td><td>dga</td></tr>
+        <tr><td>ztscylhitkplaemfiuxcubozmr.ru</td><td>dga</td></tr>
+        <tr><td>ns1.kenshoo.com</td><td>normal</td></tr>
+    </table>
+</div>
+
+
+<table>
+    <tr>
+        <td>
+            <h3> Raw Data: Domain Names</h3>
+            <img src="/assets/URL_Parts.png" alt="Smiley face" height="300" width="600">
+        </td>
+        <td>
+            <h3> Features Selected from Raw Domain Names</h3>
+            <div>
+                <table style="width:75%">
+                    <tr><th><b>Features</b></th><th><b>Description</b></th></tr>
+                    <tr><td>url_length</td><td>number of characters in the primary domain name</td><tr>
+                    <tr><td>url_punctuation_count</td><td> number of periods in the primary domain </td><tr>
+                    <tr><td>num_char_ratio</td><td> ratio of numbers to other characters in the primary domain
+                    <tr><td>cons_vow_ratio</td><td> ratio of consonants to vowels in the primary domain</td><tr>
+                    <tr><td>tld_ru</td><td> top level domain is from the Russian Federation</td><tr>
+                </table>
+            </div>
+
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+<h3>Sublime Black Model Insights </h3>
+
+
+
+
+<table>
+    <tr>
+        <td>
+            <h3>Extracted Features Predictive Strength</h3>
+
+            <div id="piechart">
+
+                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+                <script type="text/javascript">
+                    // Load google charts
+                    google.charts.load('current', {'packages':['corechart']});
+                    google.charts.setOnLoadCallback(drawChart);
+
+                    // Draw the chart and set the chart values
+                    function drawChart() {
+                        var data = google.visualization.arrayToDataTable([
+                            ['Feature', 'Strength'],
+                            ['url_length', 52],
+                            ['tld_ru', 17],
+                            ['num_char_ratio', 11],
+                            ['url_punctuation_count', 10],
+                            ['cons_vow_ratio', 10]
+                        ]);
+
+                        // Optional; add a title and set the width and height of the chart
+                        var options = {'title':'DGA Prediction Feature Strength', 'width':550, 'height':400};
+
+                        // Display the chart inside the <div> element with id="piechart"
+                        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                        chart.draw(data, options);
+                    }
+                </script>
+
+            </div>
+            <p> In absolute terms the domain name length has the most predictive power, followed by if the the domain is from the Russian Federation.</p>
+
+        </td>
+        <td>
+
+            <h3>Extracted Features Relative Strength</h3>
+            <div id = "container" style = "width: 550px; height: 369px; margin: 0 auto">
+
+                <script language = "JavaScript">
+                    function drawChart() {
+                        // Define the chart to be drawn.
+                        var data = google.visualization.arrayToDataTable([
+                            ['Year', 'Normal', 'DGA'],
+                            ['0 to 20 chars', 1.8,  4.2],
+                            ['21 to 27 chars',  1.6, 3.3],
+                            ['28 to 34 chars',  1.7, 3.4],
+                            ['35 to 70 chars',  1.7, 2.3]
+                        ]);
+
+                        var options = {title: 'Cons_Vow_Ratio vs URL Length', isStacked:true};
+
+                        // Instantiate and draw the chart.
+                        var chart = new google.visualization.BarChart(document.getElementById('container'));
+                        chart.draw(data, options);
+                    }
+                    google.charts.setOnLoadCallback(drawChart);
+                </script>
+
+            </div>
+          <p> In relative terms, for legitimate domain names the number of consonants to vowels is fairly consistent across domain name length. However, for dga, higher domain name lengths (>20) coupled with high consonant to vowel ratios provides discriminative power for a machine learning classifier.</p>
+
+        </td>
+    </tr>
+
+
+</table>
+</body>
+</html>
+
